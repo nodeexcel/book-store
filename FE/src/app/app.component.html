@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>BOOK STORE</span>
+        <span class="spacer"></span>
+        <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">power_settings_new</mat-icon> -->
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <mat-list>
+            <mat-list-item [routerLink]="['/']" routerLinkActive="active">
+                <mat-icon matListIcon>library_books</mat-icon>
+                <h3 matLine> Books </h3>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item [routerLink]="['/add-book']" routerLinkActive="active">
+                <mat-icon matListIcon>add</mat-icon>
+                <h3 matLine> Suggest Book </h3>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item [routerLink]="['/vote-book']" routerLinkActive="active">
+                <mat-icon matListIcon>favorite_border</mat-icon>
+                <h3 matLine> Vote Book </h3>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
