@@ -6,5 +6,18 @@ mat-list-item {
     flex: 1 1 auto;
 }
 .active {
-    // background: #dcdef3;
+    background: #dcdef3;
+    color: #f34f4f;
+}
+
+mat-toolbar-row {
+    span {
+        padding: 1em 1em;
+        text-transform: capitalize;
+        outline: none;
+        cursor: pointer;
+        mat-icon {
+            vertical-align: sub;
+        }
+    }
 }

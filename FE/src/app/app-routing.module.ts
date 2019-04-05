@@ -5,11 +5,18 @@ import { BooksComponent } from './components/books/books.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { VoteBookComponent } from './components/vote-book/vote-book.component';
+import { HomeComponent } from './components/home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: BooksComponent,
+    redirectTo: 'home',
     pathMatch: 'full'
+  }, {
+    path: 'home',
+    component: HomeComponent,
+  }, {
+    path: 'books',
+    component: BooksComponent,
   }, {
     path: 'add-book',
     component: AddBookComponent
@@ -24,7 +31,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, { useHash: true })
   ],
   exports: [
     RouterModule

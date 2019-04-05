@@ -18,6 +18,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { ApiInterceptor } from './services/interceptor';
 
@@ -27,13 +28,15 @@ import { BooksComponent } from './components/books/books.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 import { VoteBookComponent } from './components/vote-book/vote-book.component';
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     BooksComponent,
     AddBookComponent,
     EditBookComponent,
-    VoteBookComponent
+    VoteBookComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import { VoteBookComponent } from './components/vote-book/vote-book.component';
     MatButtonModule,
     MatSnackBarModule,
     MatProgressBarModule,
+    MatTooltipModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

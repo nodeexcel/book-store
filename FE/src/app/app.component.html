@@ -1,12 +1,23 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <span>BOOK STORE</span>
+        <span [routerLink]="['/home']" routerLinkActive="active">
+            <mat-icon matListIcon>home</mat-icon> Home
+        </span>
+        <span [routerLink]="['/books']" routerLinkActive="active">
+            <mat-icon matListIcon>library_books</mat-icon> BOOKS
+        </span>
+        <span [routerLink]="['/add-book']" routerLinkActive="active">
+            <mat-icon matListIcon>add</mat-icon> Suggest Book
+        </span>
+        <span [routerLink]="['/vote-book']" routerLinkActive="active">
+            <mat-icon matListIcon>favorite_border</mat-icon> Vote Book
+        </span>
         <span class="spacer"></span>
         <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">power_settings_new</mat-icon> -->
     </mat-toolbar-row>
 </mat-toolbar>
 <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened>
+    <!-- <mat-drawer mode="side" opened>
         <mat-list>
             <mat-list-item [routerLink]="['/']" routerLinkActive="active">
                 <mat-icon matListIcon>library_books</mat-icon>
@@ -24,7 +35,7 @@
             </mat-list-item>
             <mat-divider></mat-divider>
         </mat-list>
-    </mat-drawer>
+    </mat-drawer> -->
     <mat-drawer-content>
         <router-outlet></router-outlet>
     </mat-drawer-content>
