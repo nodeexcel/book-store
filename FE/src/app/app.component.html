@@ -1,42 +1,83 @@
-<mat-toolbar color="primary">
+<nav class="navbar navbar-light bg-lignt">
+    <button class="navbar-toggler mb-2" type="button" (click)="isCollapsed = !isCollapsed">
+        <span class="navbar-toggler-icon my-toggler"></span>
+    </button>
+    <div class="navbar-collapse collapse" [ngbCollapse]="isCollapsed">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item p-1 active">
+                <a class="nav-link">Link 1</a>
+            </li>
+            <li class="nav-item p-1">
+                <a class="nav-link">Link 2</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<mat-toolbar class="app-title">
     <mat-toolbar-row>
+        <h1>BOOK CLUB APP NAME</h1>
+        <p>TAGLINE</p>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-toolbar class="app-title">
+    <mat-toolbar-row>
+        <button mat-raised-button (click)="abutUs()">ABOUT US</button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-toolbar class="navlinks">
+    <mat-toolbar-row>
+
         <span [routerLink]="['/home']" routerLinkActive="active">
-            <mat-icon matListIcon>home</mat-icon> Home
+            <mat-icon matListIcon>home</mat-icon> Book Clubs
         </span>
         <span [routerLink]="['/books']" routerLinkActive="active">
-            <mat-icon matListIcon>library_books</mat-icon> BOOKS
+            <mat-icon matListIcon>library_books</mat-icon> Discussion Board
+        </span>
+        <span [routerLink]="['/vote-book']" routerLinkActive="active">
+            <mat-icon matListIcon>favorite_border</mat-icon> Vote Suggest
+        </span>
+        <span>
+            <mat-icon matListIcon>event</mat-icon> Event Board
+        </span>
+        <span>
+            <mat-icon matListIcon>chrome_reader_mode</mat-icon> Good Reads
+        </span>
+        <span>
+            <mat-icon matListIcon>feedback</mat-icon> Feedback
+        </span>
+        
+        <!-- <span [routerLink]="['/home']" routerLinkActive="active">
+            <mat-icon matListIcon>home</mat-icon> Book Clubs
+        </span>
+        <span [routerLink]="['/books']" routerLinkActive="active">
+            <mat-icon matListIcon>library_books</mat-icon> Discussion Board
+        </span>
+        <span [routerLink]="['/vote-book']" routerLinkActive="active">
+            <mat-icon matListIcon>favorite_border</mat-icon> Vote Suggest
         </span>
         <span [routerLink]="['/add-book']" routerLinkActive="active">
             <mat-icon matListIcon>add</mat-icon> Suggest Book
         </span>
-        <span [routerLink]="['/vote-book']" routerLinkActive="active">
-            <mat-icon matListIcon>favorite_border</mat-icon> Vote Book
+        <span>
+            <mat-icon matListIcon>add</mat-icon> Good Reads
         </span>
-        <span class="spacer"></span>
-        <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">power_settings_new</mat-icon> -->
+        <span>
+            <mat-icon matListIcon>add</mat-icon> Feedback
+        </span>
+        <span class="spacer"></span> -->
     </mat-toolbar-row>
 </mat-toolbar>
 <mat-drawer-container class="example-container">
-    <!-- <mat-drawer mode="side" opened>
-        <mat-list>
-            <mat-list-item [routerLink]="['/']" routerLinkActive="active">
-                <mat-icon matListIcon>library_books</mat-icon>
-                <h3 matLine> Books </h3>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item [routerLink]="['/add-book']" routerLinkActive="active">
-                <mat-icon matListIcon>add</mat-icon>
-                <h3 matLine> Suggest Book </h3>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <mat-list-item [routerLink]="['/vote-book']" routerLinkActive="active">
-                <mat-icon matListIcon>favorite_border</mat-icon>
-                <h3 matLine> Vote Book </h3>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-        </mat-list>
-    </mat-drawer> -->
     <mat-drawer-content>
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>
+
+<footer>
+        <mat-icon matListIcon>copyright</mat-icon>2019 Copyright Text
+</footer>

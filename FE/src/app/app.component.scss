@@ -5,19 +5,80 @@ mat-list-item {
 .spacer {
     flex: 1 1 auto;
 }
+
 .active {
     background: #dcdef3;
     color: #f34f4f;
 }
 
-mat-toolbar-row {
+.navlinks mat-toolbar-row {
+    background: #495f77;
+    color: #fff;
+    justify-content: space-between;
+    overflow-x: auto;
     span {
-        padding: 1em 1em;
+        padding: 4px 1em;
         text-transform: capitalize;
         outline: none;
         cursor: pointer;
+        flex: 0 0 16.6666667%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+
         mat-icon {
             vertical-align: sub;
         }
     }
+}
+
+.navbar {
+    button {
+        outline: none;
+    }
+
+    background: #495f77;
+    color: #fff;
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
+    .navbar-toggler {
+        border-color: rgb(255, 255, 255);
+    }
+}
+
+.app-title {
+    color: #fff;
+
+    h1,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .mat-toolbar-row {
+        justify-content: center;
+        flex-direction: column;
+        line-height: 8px;
+        background: #495f77;
+    }
+}
+
+footer {
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #404578;
 }
