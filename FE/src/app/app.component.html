@@ -38,9 +38,13 @@
         <span [routerLink]="['/books']" routerLinkActive="active">
             <mat-icon matListIcon>library_books</mat-icon> Discussion Board
         </span>
-        <span [routerLink]="['/vote-book']" routerLinkActive="active">
-            <mat-icon matListIcon>favorite_border</mat-icon> Vote Suggest
+        <span [matMenuTriggerFor]="menu">
+            <mat-icon matListIcon>favorite_border</mat-icon> Suggest/Vote
         </span>
+        <mat-menu #menu="matMenu" class="my-menu">
+            <button mat-menu-item [routerLink]="['/add-book']" routerLinkActive="active">Suggest Book</button>
+            <button mat-menu-item  [routerLink]="['/vote-book']" routerLinkActive="active">Vote</button>
+        </mat-menu>
         <span>
             <mat-icon matListIcon>event</mat-icon> Event Board
         </span>
@@ -50,7 +54,7 @@
         <span>
             <mat-icon matListIcon>feedback</mat-icon> Feedback
         </span>
-        
+
         <!-- <span [routerLink]="['/home']" routerLinkActive="active">
             <mat-icon matListIcon>home</mat-icon> Book Clubs
         </span>
@@ -79,5 +83,5 @@
 </mat-drawer-container>
 
 <footer>
-        <mat-icon matListIcon>copyright</mat-icon>2019 Copyright Text
+    <mat-icon matListIcon>copyright</mat-icon>2019 Copyright Text
 </footer>

@@ -22,3 +22,14 @@ mat-card {
 mat-icon {
     cursor: pointer;
 }
+
+
+.my-menu {
+    width: 230px;
+    background: #495f77;
+    button {
+        color: #fff;
+        outline: none !important;
+        font-size: 20px;
+    }
+}

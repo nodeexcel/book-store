@@ -22,6 +22,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
 
 import { ApiInterceptor } from './services/interceptor';
 
@@ -69,7 +70,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [
     {
