@@ -51,6 +51,7 @@ mat-list-item {
 
 .app-title {
     color: #fff;
+    background: #495f77;
 
     h1,
     p {
@@ -81,4 +82,8 @@ footer {
     justify-content: center;
     color: #fff;
     background: #404578;
+}
+
+.pb-8 {
+    padding-bottom: 3rem!important;
 }
