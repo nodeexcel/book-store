@@ -15,15 +15,18 @@
 </nav>
 
 
-<mat-toolbar class="app-title">
+<mat-toolbar class="app-title nav-color-2">
+</mat-toolbar>
+
+<mat-toolbar class="app-title nav-color-3">
     <mat-toolbar-row>
-        <h1>BOOK CLUB APP NAME</h1>
-        <p>TAGLINE</p>
+        <h1>BOOK CLUB</h1>
     </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-toolbar class="app-title pb-8">
+<mat-toolbar class="app-title about-us nav-color-4">
     <mat-toolbar-row>
+        <p class="tagline">Read Anytime Anywhere</p>
         <button mat-raised-button (click)="abutUs()">ABOUT US</button>
     </mat-toolbar-row>
 </mat-toolbar>
@@ -35,7 +38,7 @@
         <span [routerLink]="['/home']" routerLinkActive="active">
             <mat-icon matListIcon>home</mat-icon> Book Clubs
         </span>
-        <span [routerLink]="['/books']" routerLinkActive="active">
+        <span>
             <mat-icon matListIcon>library_books</mat-icon> Discussion Board
         </span>
         <span [matMenuTriggerFor]="menu">
@@ -43,7 +46,7 @@
         </span>
         <mat-menu #menu="matMenu" class="my-menu">
             <button mat-menu-item [routerLink]="['/add-book']" routerLinkActive="active">Suggest Book</button>
-            <button mat-menu-item  [routerLink]="['/vote-book']" routerLinkActive="active">Vote</button>
+            <button mat-menu-item [routerLink]="['/vote-book']" routerLinkActive="active">Vote</button>
         </mat-menu>
         <span>
             <mat-icon matListIcon>event</mat-icon> Event Board
@@ -51,8 +54,8 @@
         <span>
             <mat-icon matListIcon>chrome_reader_mode</mat-icon> Good Reads
         </span>
-        <span>
-            <mat-icon matListIcon>feedback</mat-icon> Feedback
+        <span [routerLink]="['/books']" routerLinkActive="active">
+            <mat-icon matListIcon>library_books</mat-icon> Book List
         </span>
 
         <!-- <span [routerLink]="['/home']" routerLinkActive="active">

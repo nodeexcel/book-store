@@ -9,12 +9,13 @@ body {
 }
 
 mat-drawer-container {
-    min-height: calc(100vh - 230px);
+    // min-height: calc(100vh - 230px);
 }
 
 .mat-drawer {
     width: 200px;
 }
+
 mat-card {
     margin: 8px;
 }
@@ -26,10 +27,30 @@ mat-icon {
 
 .my-menu {
     width: 230px;
-    background: #495f77;
+    background: #a3d06e;
+
     button {
         color: #fff;
         outline: none !important;
         font-size: 20px;
+    }
+}
+
+.about-us {
+    margin-bottom: 8px;
+
+    .tagline {
+        margin-top: -7px !important;
+        margin-bottom: 10px !important;
+    }
+
+    button {
+        color: #a3d06e;
+        font-weight: bolder;
+        padding: 0 4px;
+
+        span {
+            font-size: 20px;
+        }
     }
 }
